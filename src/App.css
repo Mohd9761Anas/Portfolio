@@ -1,5 +1,9 @@
+
 /* intro */
-.intro{
+
+
+
+ .intro {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1.5fr;
@@ -7,42 +11,76 @@
   color: white;
   height: 90vh;
   align-items: center;
+  padding-top: 5rem; 
 }
-.intro-text  .text1{
+
+.intro-text .text1 {
   font-size: 27px;
 }
-.intro-text  .text2{
+
+.intro-text .text2 {
   font-size: 75px;
   font-weight: 750;
 }
-.intro-text  .text3{
+
+.intro-text .text3 {
   font-size: 40px;
 }
 
-.anas{
+.anas {
   background-image: url("anas.jpg");
   background-size: cover;
-    height: 20rem;
-    width: 20rem;
-    border-radius: 50%;
-    margin-left: 5rem;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin-left: 5rem;
+  
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .intro {
+    grid-template-columns: 1fr;
+    height: 100vh;
+    padding-top: 7rem; 
+  }
+
+  .intro-text {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .intro-text .text2 {
+    font-size: 50px;
+  }
+
+  .intro-text .text3 {
+    font-size: 30px;
+  }
+
+  .anas {
+    height: 15rem;
+    width: 15rem;
+    margin: 2rem auto;
+  }
 }
 
 
+
+
 /* about */
+
 .about {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  align-items: center; /* Center the content horizontally */
-  height: 80vh; /* Full viewport height */
-  background-color: #f0f0f0; /* Optional: add a background color */
-  
+  align-items: center;
+  height: 80vh;
+  background-color: #f0f0f0;
 }
 
 .about-heading {
   padding-top: 5rem;
-  margin-bottom: 30px; /* 30px gap between heading and content */
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 3rem;
 }
@@ -55,7 +93,7 @@
 .about-intro {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem; /* Optional: add some space below the intro */
+  margin-bottom: 1rem;
 }
 
 .about-text {
@@ -64,25 +102,53 @@
   line-height: 1.5;
 }
 
-/*project*/
-.project{
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .about{
+    height: 60vh;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    width: 90%;
+    padding-top: 7vh;
+  }
+
+  .about-intro {
+    font-size: 1.25rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+}
+
+
+.project {
   height: 90vh;
   background-color: black;
   color: white;
+ 
 }
-.heading{
+
+.heading {
   padding-top: 4rem;
   padding-bottom: 5rem;
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
 }
-.project-box{
+
+.project-box {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.box{
+
+.box {
   height: 280px;
   width: 320px;
   background-color: #222222;
@@ -90,12 +156,50 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.box-heading{
+
+.box-heading {
   font-size: 1.5rem;
   font-weight: 600;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .project {
+     
+    height: auto;/* Adjust this as needed */
+  }
+  .project-box {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project {
+   height: auto;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+
+  .box {
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .box-heading {
+    font-size: 1.2rem;
+  }
+}
+
 
 /*Skill*/
 .skill {
@@ -165,15 +269,13 @@ form {
 }
 
 .form-control {
-  background-color: transparent; /* Transparent background for form fields */
-  color: white; /* White text color for form fields */
-  border: 1px solid white; /* White border for form fields */
+  background-color: transparent; 
+  color: white; 
 }
 
 .form-control::placeholder {
-  color: white; /* White placeholder text */
+  color: white; 
 }
-
 button {
   width: 100%;
 }
